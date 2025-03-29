@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>project</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
+</head>
+
+<body>
+    <script src="project.js"></script>
+    <button onclick="window.location.href='page.html'">別のページを開く</button>
+
+    <label for="slider">スライダー:</label>
+    <input type="range" id="slider" min="0" max="100" value="50">
+    <p>選択した値: <span id="sliderValue">50</span></p>
+
+    <script>
+        const slider = document.getElementById("slider");
+        const sliderValue = document.getElementById("sliderValue");
+
+        slider.addEventListener("input", function () {
+            sliderValue.textContent = slider.value;
+        });
+    </script>
+
+    <label for="list">選択肢:</label>
+    <select id="list">
+        <option value="apple">りんご</option>
+        <option value="banana">バナナ</option>
+        <option value="grape">ぶどう</option>
+    </select>
+
+    <p>選んだ果物: <span id="selectedValue">りんご</span></p>
+
+    <script>
+        // 選択肢が変更されたら表示
+        const list = document.getElementById("list");
+        const selectedValue = document.getElementById("selectedValue");
+
+        list.addEventListener("change", function () {
+            selectedValue.textContent = list.options[list.selectedIndex].text;
+        });
+    </script>
+</body>
+
+</html>

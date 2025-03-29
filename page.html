@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vue</title>
+    <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+</head>
+
+<body>
+    <h1>このページが開きました！</h1>
+    <a href="index.html">戻る</a>
+
+    <div id="app">
+        <p>こんにちは、{{ message }}！</p>
+        <button @click="changeMessage">メッセージを変更</button>
+    </div>
+
+    <script>
+        Vue.createApp({
+            data() {
+                return {
+                    message: "Vueの世界"
+                };
+            },
+            methods: {
+                changeMessage() {
+                    this.message = "Vueを始めよう！";
+                }
+            }
+        }).mount("#app");
+    </script>
+
+    <style>
+        button {
+            background-color: skyblue;
+            color: white;
+            padding: 10px;
+            border-radius: 10px;
+        }
+    </style>
+</body>
+
+</html>
