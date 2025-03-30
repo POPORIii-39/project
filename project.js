@@ -1,21 +1,27 @@
 let bgColor = 0;
+let ballColor = "#64c8c8";
 
 function setup() {
     let canvas = createCanvas(window.innerWidth * 0.5, window.innerHeight * 0.5);
     canvas.parent("left-container");
-}
 
-function draw() {
     let slider = document.getElementById("colorSlider");
+    let colorPicker = document.getElementById("colorPicker");
 
     slider.addEventListener("input", function () {
         bgColor = Number(slider.value);
     });
 
+    colorPicker.addEventListener("input", function () {
+        ballColor = colorPicker.value;
+    });
+}
+
+function draw() {
     background(bgColor);
     let x = frameCount % width;
     let y = height / 2 + sin(frameCount * 0.1) * 100;
-    fill(100, 200, 200);
+    fill(ballColor);
     ellipse(x, y, 20, 20);
 }
 

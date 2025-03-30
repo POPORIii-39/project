@@ -81,7 +81,6 @@
         <p>選んだ果物: <span id="selectedValue">りんご</span></p>
 
         <script>
-            // 選択肢が変更されたら表示
             const list = document.getElementById("list");
             const selectedValue = document.getElementById("selectedValue");
 
@@ -91,7 +90,7 @@
         </script><br>
 
         <label>好きな色を選んでください:</label>
-        <input type="color"><br><br>
+        <input type="color" id="colorPicker" value="#64c8c8"><br><br>
 
         <details>
             <summary>詳細を表示</summary>
