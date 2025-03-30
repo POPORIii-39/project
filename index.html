@@ -7,6 +7,8 @@
     <title>project</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 
     <style>
         body {
@@ -17,7 +19,7 @@
 
 <body>
     <script src="project.js"></script>
-    <button onclick="window.location.href='page.html'">別のページを開く</button>
+    <button onclick="window.location.href='page.html'">別のページを開く</button><br><br>
 
     <label for="slider">スライダー:</label>
     <input type="range" id="slider" min="0" max="100" value="50">
@@ -30,14 +32,14 @@
         slider.addEventListener("input", function () {
             sliderValue.textContent = slider.value;
         });
-    </script>
+    </script><br>
 
     <label for="list">選択肢:</label>
     <select id="list">
         <option value="apple">りんご</option>
         <option value="banana">バナナ</option>
         <option value="grape">ぶどう</option>
-    </select>
+    </select><br>
 
     <p>選んだ果物: <span id="selectedValue">りんご</span></p>
 
@@ -49,7 +51,43 @@
         list.addEventListener("change", function () {
             selectedValue.textContent = list.options[list.selectedIndex].text;
         });
-    </script>
+    </script><br>
+
+    <label>好きな色を選んでください:</label>
+    <input type="color"><br><br>
+
+    <details>
+        <summary>詳細を表示</summary>
+        <p>ここに詳細な情報が表示されます。</p>
+    </details><br>
+
+    <dialog id="myDialog">
+        <p>これはモーダルダイアログです！</p>
+        <button onclick="document.getElementById('myDialog').close()">閉じる</button>
+    </dialog>
+    <button onclick="document.getElementById('myDialog').showModal()">開く</button><br><br>
+
+    <input type="date"><br><br>
+
+    <datalist></datalist>
+
+    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        モーダルを開く
+    </button>
+
+    <div class="modal fade" id="exampleModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title">モーダルタイトル</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    ここに内容が表示されます。
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 
 </html>
