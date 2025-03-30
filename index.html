@@ -8,86 +8,126 @@
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
 
     <style>
         body {
             font-family: "Arial", "M PLUS Rounded 1c", sans-serif;
         }
+
+        body {
+            display: flex;
+        }
+
+        #left-container {
+            width: 60%;
+            height: 100vh;
+            background-color: rgb(250, 221, 226);
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #right-container {
+            flex-grow: 1;
+            padding: 20px;
+            background-color: rgb(208, 227, 235);
+        }
+
+        canvas {
+            display: block;
+        }
     </style>
 </head>
 
 <body>
-    <button onclick="window.location.href='page.html'">pageを開く</button><br><br>
 
-    <button onclick="window.location.href='split.html'">splitを開く</button><br><br>
+    <div id="left-container">
+    </div>
 
-    <label for="slider">スライダー:</label>
-    <input type="range" id="slider" min="0" max="100" value="50">
-    <p>選択した値: <span id="sliderValue">50</span></p>
+    <div id="right-container">
+        <h1>設定</h1>
+        <p>背景色の設定</p>
+        <label for="colorSlider">背景色:</label>
+        <input type="range" id="colorSlider" min="0" max="255" value="0">
+        <br><br>
 
-    <script>
-        const slider = document.getElementById("slider");
-        const sliderValue = document.getElementById("sliderValue");
+        <button onclick="window.location.href='page.html'">pageを開く</button><br><br>
 
-        slider.addEventListener("input", function () {
-            sliderValue.textContent = slider.value;
-        });
-    </script><br>
+        <button onclick="window.location.href='split.html'">splitを開く</button><br><br>
 
-    <label for="list">選択肢:</label>
-    <select id="list">
-        <option value="apple">りんご</option>
-        <option value="banana">バナナ</option>
-        <option value="grape">ぶどう</option>
-    </select><br>
+        <label for="slider">スライダー:</label>
+        <input type="range" id="slider" min="0" max="100" value="50">
+        <p>選択した値: <span id="sliderValue">50</span></p>
 
-    <p>選んだ果物: <span id="selectedValue">りんご</span></p>
+        <script>
+            const slider = document.getElementById("slider");
+            const sliderValue = document.getElementById("sliderValue");
 
-    <script>
-        // 選択肢が変更されたら表示
-        const list = document.getElementById("list");
-        const selectedValue = document.getElementById("selectedValue");
+            slider.addEventListener("input", function () {
+                sliderValue.textContent = slider.value;
+            });
+        </script><br>
 
-        list.addEventListener("change", function () {
-            selectedValue.textContent = list.options[list.selectedIndex].text;
-        });
-    </script><br>
+        <label for="list">選択肢:</label>
+        <select id="list">
+            <option value="apple">りんご</option>
+            <option value="banana">バナナ</option>
+            <option value="grape">ぶどう</option>
+        </select><br>
 
-    <label>好きな色を選んでください:</label>
-    <input type="color"><br><br>
+        <p>選んだ果物: <span id="selectedValue">りんご</span></p>
 
-    <details>
-        <summary>詳細を表示</summary>
-        <p>ここに詳細な情報が表示されます。</p>
-    </details><br>
+        <script>
+            // 選択肢が変更されたら表示
+            const list = document.getElementById("list");
+            const selectedValue = document.getElementById("selectedValue");
 
-    <dialog id="myDialog">
-        <p>これはモーダルダイアログです！</p>
-        <button onclick="document.getElementById('myDialog').close()">閉じる</button>
-    </dialog>
-    <button onclick="document.getElementById('myDialog').showModal()">開く</button><br><br>
+            list.addEventListener("change", function () {
+                selectedValue.textContent = list.options[list.selectedIndex].text;
+            });
+        </script><br>
 
-    <input type="date"><br><br>
+        <label>好きな色を選んでください:</label>
+        <input type="color"><br><br>
 
-    <datalist></datalist>
+        <details>
+            <summary>詳細を表示</summary>
+            <p>ここに詳細な情報が表示されます。</p>
+        </details><br>
 
-    <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-        モーダルを開く
-    </button><br>
+        <dialog id="myDialog">
+            <p>これはモーダルダイアログです！</p>
+            <button onclick="document.getElementById('myDialog').close()">閉じる</button>
+        </dialog>
+        <button onclick="document.getElementById('myDialog').showModal()">開く</button><br><br>
 
-    <div class="modal fade" id="exampleModal" tabindex="-1">
-        <div class="modal-dialog">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title">モーダルタイトル</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                </div>
-                <div class="modal-body">
-                    ここに内容が表示されます。
+        <input type="date"><br><br>
+
+        <datalist></datalist>
+
+        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            モーダルを開く
+        </button><br>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">モーダルタイトル</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        ここに内容が表示されます。
+                    </div>
                 </div>
             </div>
         </div>
     </div>
+
+    <script src="project.js"></script>
+
 </body>
 
 </html>
