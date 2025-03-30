@@ -4,14 +4,153 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>split</title>
+    <title>project</title>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+
+    <style>
+        body {
+            font-family: "Arial", "M PLUS Rounded 1c", sans-serif;
+        }
+
+        body {
+            display: flex;
+        }
+
+        #left-container {
+            width: 60%;
+            min-height: 100vh;
+            background-color: rgb(250, 221, 226);
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        #right-container {
+            flex-grow: 1;
+            min-height: 100vh;
+            padding: 20px;
+            background-color: rgb(208, 227, 235);
+        }
+
+        canvas {
+            display: block;
+        }
+    </style>
 </head>
 
 <body>
 
-    <h1>splitを開きました</h1>
-    <a href="index.html">戻る</a>
+    <div id="left-container">
+    </div>
+
+    <div id="right-container">
+        <a href="index.html" id="backButton">戻る</a>
+        <br><br>
+
+        <p>設定</p>
+
+        <label for="slider">背景色 R：</label>
+        <input type="range" id="colorSliderR" min="0" max="255" value="0">
+        <p>選択した値: <span id="sliderValueR">0</span></p>
+
+        <script>
+            const sliderR = document.getElementById("colorSliderR");
+            const sliderValueR = document.getElementById("sliderValueR");
+
+            sliderR.addEventListener("input", function () {
+                sliderValueR.textContent = sliderR.value;
+            });
+        </script>
+
+        <label for="slider">背景色 G：</label>
+        <input type="range" id="colorSliderG" min="0" max="255" value="0">
+        <p>選択した値: <span id="sliderValueG">0</span></p>
+
+        <script>
+            const sliderG = document.getElementById("colorSliderG");
+            const sliderValueG = document.getElementById("sliderValueG");
+
+            sliderG.addEventListener("input", function () {
+                sliderValueG.textContent = sliderG.value;
+            });
+        </script>
+
+        <label for="slider">背景色 B：</label>
+        <input type="range" id="colorSliderB" min="0" max="255" value="0">
+        <p>選択した値: <span id="sliderValueB">0</span></p>
+
+        <script>
+            const sliderB = document.getElementById("colorSliderB");
+            const sliderValueB = document.getElementById("sliderValueB");
+
+            sliderB.addEventListener("input", function () {
+                sliderValueB.textContent = sliderB.value;
+            });
+        </script>
+
+        <label for="list">選択肢:</label>
+        <select id="list">
+            <option value="apple">りんご</option>
+            <option value="banana">バナナ</option>
+            <option value="grape">ぶどう</option>
+        </select><br>
+
+        <p>選んだ果物: <span id="selectedValue">りんご</span></p>
+
+        <script>
+            const list = document.getElementById("list");
+            const selectedValue = document.getElementById("selectedValue");
+
+            list.addEventListener("change", function () {
+                selectedValue.textContent = list.options[list.selectedIndex].text;
+            });
+        </script><br>
+
+        <label>好きな色を選んでください:</label>
+        <input type="color" id="colorPicker" value="#64c8c8"><br><br>
+
+        <details>
+            <summary>詳細を表示</summary>
+            <p>ここに詳細な情報が表示されます。</p>
+        </details><br>
+
+        <dialog id="myDialog">
+            <p>これはモーダルダイアログです！</p>
+            <button onclick="document.getElementById('myDialog').close()">閉じる</button>
+        </dialog>
+        <button id="buttonModalDialog"
+            onclick="document.getElementById('myDialog').showModal()">モーダルダイアログを開く</button><br><br>
+
+        <input type="date"><br><br>
+
+        <datalist></datalist>
+
+        <button id="buttonModal" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            モーダルを開く
+        </button><br>
+
+        <div class="modal fade" id="exampleModal" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title">モーダルタイトル</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                    </div>
+                    <div class="modal-body">
+                        ここに内容が表示されます。
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="project.js"></script>
+
+    <link rel="stylesheet" href="splitStyle.css">
 
 </body>
 

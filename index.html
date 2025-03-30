@@ -20,9 +20,9 @@
         }
 
         #left-container {
-            width: 60%;
-            height: 100vh;
-            background-color: rgb(250, 221, 226);
+            width: 30%;
+            min-height: 100vh;
+            background-color: rgb(255, 255, 255);
             padding: 10px;
             display: flex;
             justify-content: center;
@@ -31,9 +31,9 @@
 
         #right-container {
             flex-grow: 1;
-            height: 100vh;
+            min-height: 100vh;
             padding: 20px;
-            background-color: rgb(208, 227, 235);
+            background-color: rgb(218, 218, 218);
         }
 
         canvas {
@@ -48,91 +48,13 @@
     </div>
 
     <div id="right-container">
-        <h1>設定</h1>
-        <p>背景色の設定</p>
-        <label for="slider">背景色 R：</label>
-        <input type="range" id="colorSliderR" min="0" max="255" value="0">
-        <br><br>
-        <label for="slider">背景色 G：</label>
-        <input type="range" id="colorSliderG" min="0" max="255" value="0">
-        <br><br>
-        <label for="slider">背景色 B：</label>
-        <input type="range" id="colorSliderB" min="0" max="255" value="0">
+        <h1>ギャラリー</h1><br>
+
+        <a href="page.html" id="pageButton">pageを開く</a>
         <br><br>
 
-        <button id="button1" onclick="window.location.href='page.html'">pageを開く</button><br><br>
-
-        <button id="button2" onclick="window.location.href='split.html'">splitを開く</button><br><br>
-
-        <label for="slider">スライダー:</label>
-        <input type="range" id="slider" min="0" max="100" value="50">
-        <p>選択した値: <span id="sliderValue">50</span></p>
-
-        <script>
-            const slider = document.getElementById("slider");
-            const sliderValue = document.getElementById("sliderValue");
-
-            slider.addEventListener("input", function () {
-                sliderValue.textContent = slider.value;
-            });
-        </script><br>
-
-        <label for="list">選択肢:</label>
-        <select id="list">
-            <option value="apple">りんご</option>
-            <option value="banana">バナナ</option>
-            <option value="grape">ぶどう</option>
-        </select><br>
-
-        <p>選んだ果物: <span id="selectedValue">りんご</span></p>
-
-        <script>
-            const list = document.getElementById("list");
-            const selectedValue = document.getElementById("selectedValue");
-
-            list.addEventListener("change", function () {
-                selectedValue.textContent = list.options[list.selectedIndex].text;
-            });
-        </script><br>
-
-        <label>好きな色を選んでください:</label>
-        <input type="color" id="colorPicker" value="#64c8c8"><br><br>
-
-        <details>
-            <summary>詳細を表示</summary>
-            <p>ここに詳細な情報が表示されます。</p>
-        </details><br>
-
-        <dialog id="myDialog">
-            <p>これはモーダルダイアログです！</p>
-            <button onclick="document.getElementById('myDialog').close()">閉じる</button>
-        </dialog>
-        <button id="button3" onclick="document.getElementById('myDialog').showModal()">モーダルダイアログを開く</button><br><br>
-
-        <input type="date"><br><br>
-
-        <datalist></datalist>
-
-        <button id="button4" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-            モーダルを開く
-        </button><br>
-
-        <div class="modal fade" id="exampleModal" tabindex="-1">
-            <div class="modal-dialog">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h5 class="modal-title">モーダルタイトル</h5>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
-                    </div>
-                    <div class="modal-body">
-                        ここに内容が表示されます。
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script src="project.js"></script>
+        <a href="split.html" id="splitButton">splitを開く</a>
+        <br><br>
 
     <link rel="stylesheet" href="style.css">
 

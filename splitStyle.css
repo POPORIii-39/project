@@ -1,0 +1,117 @@
+p {
+    color: rgb(54, 54, 54);
+    font-size: 18px;
+}
+
+#backButton {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background: #64c8c8;
+    border-radius: 15px;
+    text-decoration: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+}
+
+#backButton:hover {
+    background: #4daaaa;
+}
+
+button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: white;
+    background: #64c8c8;
+    border-radius: 15px;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+#colorSliderR {
+    appearance: none;
+    height: 8px;
+    background: #ffffff;
+    border-radius: 5px;
+    outline: gray;
+    opacity: 0.9;
+    transition: opacity 0.3s;
+}
+
+#colorSliderR:hover {
+    opacity: 1;
+}
+
+#colorSliderR::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #ff9c9c;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#colorSliderG {
+    appearance: none;
+    height: 8px;
+    background: #ffffff;
+    border-radius: 5px;
+    outline: gray;
+    opacity: 0.9;
+    transition: opacity 0.3s;
+}
+
+#colorSliderG:hover {
+    opacity: 1;
+}
+
+#colorSliderG::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #64d074;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#colorSliderB {
+    appearance: none;
+    height: 8px;
+    background: #ffffff;
+    border-radius: 5px;
+    outline: gray;
+    opacity: 0.9;
+    transition: opacity 0.3s;
+}
+
+#colorSliderB:hover {
+    opacity: 1;
+}
+
+#colorSliderB::-webkit-slider-thumb {
+    appearance: none;
+    width: 20px;
+    height: 20px;
+    background: #74b5ff;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#buttonModalDialog {
+    background-color: rgb(249, 128, 187);
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+#buttonModal {
+    background-color: rgb(234, 107, 221);
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+}
