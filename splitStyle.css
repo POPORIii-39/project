@@ -103,15 +103,27 @@ button {
 }
 
 #buttonModalDialog {
-    background-color: rgb(249, 128, 187);
+    background-color: #fe91ca;
     color: white;
     padding: 10px;
     border-radius: 15px;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#buttonModalDialog:hover {
+    background: #be7099;
 }
 
 #buttonModal {
-    background-color: rgb(234, 107, 221);
+    background-color: #dc91ff;
     color: white;
     padding: 10px;
     border-radius: 15px;
+    border: none;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+#buttonModal:hover {
+    background: #aa73c4;
 }
