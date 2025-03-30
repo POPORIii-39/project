@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ja">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,36 +10,44 @@
         body {
             display: flex;
         }
+
         #left-container {
             width: 60%;
             height: 100vh;
-            background-color: #f0f0f0;
+            background-color: rgb(250, 221, 226);
             padding: 10px;
             display: flex;
             justify-content: center;
             align-items: center;
         }
-        #content {
+
+        #right-container {
             flex-grow: 1;
             padding: 20px;
+            background-color: rgb(208, 227, 235);
         }
+
         canvas {
             display: block;
         }
     </style>
 </head>
+
 <body>
 
     <div id="left-container">
-        <h3>p5.js の描画</h3>
+        <label for="colorSlider">背景色:</label>
+        <input type="range" id="colorSlider" min="0" max="255" value="0">
     </div>
 
-    <div id="content">
+    <div id="right-container">
         <h1>メインコンテンツ</h1>
         <p>ここに通常のコンテンツを表示</p>
+        <label for="slider">スライダー:</label>
     </div>
 
     <script src="project.js"></script>
 
 </body>
+
 </html>
