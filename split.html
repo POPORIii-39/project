@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>split</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script>
+    <style>
+        body {
+            display: flex;
+        }
+        #left-container {
+            width: 60%;
+            height: 100vh;
+            background-color: #f0f0f0;
+            padding: 10px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        #content {
+            flex-grow: 1;
+            padding: 20px;
+        }
+        canvas {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="left-container">
+        <h3>p5.js の描画</h3>
+    </div>
+
+    <div id="content">
+        <h1>メインコンテンツ</h1>
+        <p>ここに通常のコンテンツを表示</p>
+    </div>
+
+    <script src="project.js"></script>
+
+</body>
+</html>
