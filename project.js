@@ -1,4 +1,4 @@
-let bgColor = 0;
+let backgroundColor = 0;
 let ballColor = "#64c8c8";
 
 function setup() {
@@ -9,7 +9,7 @@ function setup() {
     let colorPicker = document.getElementById("colorPicker");
 
     slider.addEventListener("input", function () {
-        bgColor = Number(slider.value);
+        backgroundColor = Number(slider.value);
     });
 
     colorPicker.addEventListener("input", function () {
@@ -18,7 +18,7 @@ function setup() {
 }
 
 function draw() {
-    background(bgColor);
+    background(backgroundColor);
     let x = frameCount % width;
     let y = height / 2 + sin(frameCount * 0.1) * 100;
     fill(ballColor);
