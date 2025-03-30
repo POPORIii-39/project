@@ -1,7 +1,7 @@
 let bgColor = 0;
 
 function setup() {
-    let canvas = createCanvas(windowWidth * 0.5, windowHeight * 0.5);
+    let canvas = createCanvas(window.innerWidth * 0.5, window.innerHeight * 0.5);
     canvas.parent("left-container");
 }
 
@@ -20,5 +20,5 @@ function draw() {
 }
 
 function windowResized() {
-    resizeCanvas(windowWidth * 0.5, windowHeight * 0.5);
+    resizeCanvas(window.innerWidth * 0.5, window.innerHeight * 0.5);
 }
