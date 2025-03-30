@@ -1,4 +1,32 @@
 p {
-    color: purple;
+    color: gray;
     font-size: 18px;
-  }
+}
+
+#button1 {
+    background-color: rgb(48, 214, 167);
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+#button2 {
+    background-color: rgb(69, 199, 225);
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+#button3 {
+    background-color: rgb(249, 128, 187);
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+}
+
+#button4 {
+    background-color: rgb(234, 107, 221);
+    color: white;
+    padding: 10px;
+    border-radius: 15px;
+}

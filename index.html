@@ -54,9 +54,9 @@
         <input type="range" id="colorSlider" min="0" max="255" value="0">
         <br><br>
 
-        <button onclick="window.location.href='page.html'">pageを開く</button><br><br>
+        <button id="button1" onclick="window.location.href='page.html'">pageを開く</button><br><br>
 
-        <button onclick="window.location.href='split.html'">splitを開く</button><br><br>
+        <button id="button2" onclick="window.location.href='split.html'">splitを開く</button><br><br>
 
         <label for="slider">スライダー:</label>
         <input type="range" id="slider" min="0" max="100" value="50">
@@ -102,13 +102,13 @@
             <p>これはモーダルダイアログです！</p>
             <button onclick="document.getElementById('myDialog').close()">閉じる</button>
         </dialog>
-        <button onclick="document.getElementById('myDialog').showModal()">開く</button><br><br>
+        <button id="button3" onclick="document.getElementById('myDialog').showModal()">開く</button><br><br>
 
         <input type="date"><br><br>
 
         <datalist></datalist>
 
-        <button class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        <button id="button4" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
             モーダルを開く
         </button><br>
 
@@ -128,6 +128,8 @@
     </div>
 
     <script src="project.js"></script>
+
+    <link rel="stylesheet" href="style.css">
 
 </body>
 
